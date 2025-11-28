@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="shop.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="browser structure pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="50"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title=".Просматриваемые" custom_title="0" dock_id="4" table="0,30:Просматриваемые"/><dock_state state="000000ff00000000fd00000001000000020000012800000213fc0100000004fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500340100000000000001280000012800ffffff000001280000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">-- Добавляем категории
+INSERT INTO categories (name, image_url) VALUES ('Инструменты', 'url_img_1');
+INSERT INTO categories (name, image_url) VALUES ('Стройматериалы', 'url_img_2');
+
+-- Добавляем товары (Цены в дирамах/копейках: 50000 = 500.00 сомони)
+INSERT INTO products (category_id, name, description, price, is_recommended) 
+VALUES (1, 'Дрель ударная', 'Мощная дрель для бетона', 45000, 1);
+
+INSERT INTO products (category_id, name, description, price, is_recommended) 
+VALUES (2, 'Цемент М500', 'Мешок 50кг', 8500, 0);</sql><current_tab id="0"/></tab_sql></sqlb_project>
